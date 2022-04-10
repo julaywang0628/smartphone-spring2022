@@ -15,9 +15,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//
-//        cell.textLabel?.text = companies[indexPath.row]
         
         let cell = Bundle.main.loadNibNamed("StockQuoteTableViewCell", owner: self, options: nil)?.first as! StockQuoteTableViewCell
                 
@@ -25,6 +22,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         cell.lblName.text = companyModel.name
         cell.lblSymbol.text = companyModel.symbol
         cell.symbol = companyModel.symbol
+        cell.name = companyModel.name
         cell.sendQuoteDelegate = self
         
         return cell

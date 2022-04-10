@@ -8,8 +8,9 @@
 import Foundation
 
 class StockQuoteModel {
-    init(_ symbol: String) {
+    init(_ symbol: String, _ name: String) {
         self.symbol = symbol
+        self.name = name
     }
     var symbol : String = ""
     var name : String = ""

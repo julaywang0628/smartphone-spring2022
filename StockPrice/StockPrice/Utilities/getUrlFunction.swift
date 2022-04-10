@@ -22,7 +22,7 @@ func getStockQuote(_ url : String) -> Promise<StockQuoteModel>{
                 seal.reject(response.error!)
             }
                 
-            let quote = StockQuoteModel("")
+            let quote = StockQuoteModel("","")
             let stockArray = JSON(response.data!).arrayValue
             
             guard let stock = stockArray.first else { return seal.fulfill(quote)}

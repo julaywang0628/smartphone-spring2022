@@ -47,11 +47,11 @@ class ViewController: UIViewController, SendQuoteDelegate {
     }
     
     func initializeCompanies() -> [StockQuoteModel] {
-        let FB = StockQuoteModel("FB");
-        let AAPL = StockQuoteModel("AAPL");
-        let GOOG = StockQuoteModel("GOOG");
-        let MSFT = StockQuoteModel("MSFT");
-        let AMZN = StockQuoteModel("AMZN");
+        let FB = StockQuoteModel("FB","Meta Platforms,Inc.");
+        let AAPL = StockQuoteModel("AAPL","Apple.com, Inc");
+        let GOOG = StockQuoteModel("GOOG","Alphabet Inc.");
+        let MSFT = StockQuoteModel("MSFT","Microsoft Corporation");
+        let AMZN = StockQuoteModel("AMZN", "Amazon.com, Inc");
         
         var modelArr = [StockQuoteModel]()
         
